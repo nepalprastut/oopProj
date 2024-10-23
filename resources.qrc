@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>right-to-bracket-solid.svg</file>
+        <file>user-plus-solid.svg</file>
+    </qresource>
+</RCC>
