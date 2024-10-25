@@ -1,0 +1,12 @@
+release/main.o
+release/mainwindow.o
+release/register.o
+release/database.o
+release/home.o
+release/login.o
+release/recommender.o
+release/watchlist.o
+release/qrc_resources.o
+release/moc_mainwindow.o
+release/moc_register.o
+release/moc_login.o

@@ -1,0 +1,10 @@
+debug/main.o
+debug/mainwindow.o
+debug/database.o
+debug/home.o
+debug/login.o
+debug/recommender.o
+debug/watchlist.o
+debug/qrc_resources.o
+debug/moc_mainwindow.o
+debug/moc_login.o

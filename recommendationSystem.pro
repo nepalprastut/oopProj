@@ -11,20 +11,20 @@ CONFIG += c++17
 SOURCES += \
     main.cpp \
     mainwindow.cpp \
+    register.cpp \
     src/Database/database.cpp \
     src/Home/home.cpp \
     src/Login/login.cpp \
     src/Recommender/recommender.cpp \
-    src/Register/register.cpp \
     src/Watchlist/watchlist.cpp
 
 HEADERS += \
     mainwindow.h \
+    register.h \
     src/Database/database.h \
     src/Home/home.h \
     src/Login/login.h \
     src/Recommender/recommender.h \
-    src/Register/register.h \
     src/Watchlist/watchlist.h
 
 FORMS += \

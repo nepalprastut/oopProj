@@ -1,11 +1,12 @@
-#include "mainwindow.h"
 #include <QApplication>
+#include "mainwindow.h"
 #include <src/Login/login.h>
+#include <register.h>
+
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     MainWindow w;
-    // Login w;
-    w.show();
+    w.showMaximized();
     return a.exec();
 }
