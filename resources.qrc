@@ -4,6 +4,7 @@
         <file>user-plus-solid.svg</file>
         <file>close.png</file>
         <file>login.png</file>
+        <file>signup.png</file>
     </qresource>
     <qresource prefix="/"/>
 </RCC>

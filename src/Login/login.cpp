@@ -38,6 +38,27 @@ Login::Login(QWidget *parent)
                                  "Incomplete submission");
             return;
         }
+       // else{this->close();
+       //     ui->close();
+       // }
+        QString UserName = ui->lineEdit_username->text();
+        QString Password = ui->lineEdit_password->text();
+
+        //check the username and password through the database
+        //test
+        if(UserName == "prasaman"&& Password=="123")
+        {
+            QMessageBox::information(this,"Prasaman","login successful");
+            close();
+           // ui->close();
+
+
+        }
+        else
+        {
+            QMessageBox::warning(this,"Movie Recommendation System","enter valid username or password");
+        }
+
     });
 }
 
@@ -47,23 +68,23 @@ Login::~Login() {
 
 
 
-void Login::on_pushButton_login_clicked()
-{
-    QString UserName = ui->lineEdit_username->text();
-    QString Password = ui->lineEdit_password->text();
+// void Login::on_pushButton_login_clicked()
+// {
+//     QString UserName = ui->lineEdit_username->text();
+//     QString Password = ui->lineEdit_password->text();
 
-    //check the username and password through the database
-    //test
-    if(UserName == "prasaman"&& Password=="123")
-    {
-        QMessageBox::information(this,"Prasaman","login successful");
+//     //check the username and password through the database
+//     //test
+//     if(UserName == "prasaman"&& Password=="123")
+//     {
+//         QMessageBox::information(this,"Prasaman","login successful");
 
-    }
-    else
-    {
-        QMessageBox::warning(this,"Movie Recommendation System","enter valid username or password");
-    }
-}
+//     }
+//     else
+//     {
+//         QMessageBox::warning(this,"Movie Recommendation System","enter valid username or password");
+//     }
+// }
 
 
 void Login::on_pushButton_close_clicked()

@@ -29,6 +29,7 @@ void MainWindow::on_login_clicked()
 
    login->setWindowModality(Qt::ApplicationModal);  // Make it modal
    login->show();
+
 }
 
 void MainWindow::on_signup_clicked()
@@ -41,4 +42,6 @@ void MainWindow::on_signup_clicked()
 
 
 }
+
+
 
