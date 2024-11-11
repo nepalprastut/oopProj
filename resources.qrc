@@ -2,5 +2,8 @@
     <qresource prefix="/icons">
         <file>right-to-bracket-solid.svg</file>
         <file>user-plus-solid.svg</file>
+        <file>close.png</file>
+        <file>login.png</file>
     </qresource>
+    <qresource prefix="/"/>
 </RCC>

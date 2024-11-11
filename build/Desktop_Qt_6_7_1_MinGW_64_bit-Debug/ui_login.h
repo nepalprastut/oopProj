@@ -24,30 +24,41 @@ class Ui_Login
 {
 public:
     QWidget *centralwidget;
+    QWidget *widget_2;
     QWidget *widget;
     QLabel *label_3;
     QLineEdit *lineEdit_username;
     QLineEdit *lineEdit_password;
     QPushButton *pushButton_login;
     QPushButton *pushButton_close;
+    QWidget *widget_3;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *Login)
     {
         if (Login->objectName().isEmpty())
             Login->setObjectName("Login");
-        Login->resize(800, 600);
+        Login->resize(1280, 769);
         centralwidget = new QWidget(Login);
         centralwidget->setObjectName("centralwidget");
-        widget = new QWidget(centralwidget);
+        centralwidget->setStyleSheet(QString::fromUtf8(""));
+        widget_2 = new QWidget(centralwidget);
+        widget_2->setObjectName("widget_2");
+        widget_2->setGeometry(QRect(640, 0, 640, 720));
+        widget_2->setStyleSheet(QString::fromUtf8("background-color: rgb(243, 244, 248);"));
+        widget = new QWidget(widget_2);
         widget->setObjectName("widget");
-        widget->setGeometry(QRect(110, 10, 341, 381));
-        widget->setStyleSheet(QString::fromUtf8("background-color:white;"));
+        widget->setGeometry(QRect(150, 270, 341, 311));
+        widget->setStyleSheet(QString::fromUtf8("background-color:white;\n"
+"border: 2px solid rgba(255, 255, 255, .2);\n"
+"\n"
+"box_shadow: 0 0 10px rgba(0, 0, 0, .2);"));
         label_3 = new QLabel(widget);
         label_3->setObjectName("label_3");
-        label_3->setGeometry(QRect(140, 20, 71, 31));
+        label_3->setGeometry(QRect(50, 30, 241, 31));
         label_3->setStyleSheet(QString::fromUtf8("font-size:20px;\n"
 "color:black;"));
+        label_3->setAlignment(Qt::AlignmentFlag::AlignCenter);
         lineEdit_username = new QLineEdit(widget);
         lineEdit_username->setObjectName("lineEdit_username");
         lineEdit_username->setGeometry(QRect(50, 90, 241, 40));
@@ -74,7 +85,7 @@ public:
 "padding-bottom:7px;\n"
 "font-size:20px;\n"
 "color:black;"));
-        lineEdit_password->setEchoMode(QLineEdit::Password);
+        lineEdit_password->setEchoMode(QLineEdit::EchoMode::Password);
         pushButton_login = new QPushButton(widget);
         pushButton_login->setObjectName("pushButton_login");
         pushButton_login->setGeometry(QRect(50, 260, 241, 41));
@@ -94,9 +105,9 @@ public:
 "\n"
 "}\n"
 ""));
-        pushButton_close = new QPushButton(widget);
+        pushButton_close = new QPushButton(widget_2);
         pushButton_close->setObjectName("pushButton_close");
-        pushButton_close->setGeometry(QRect(300, 0, 41, 41));
+        pushButton_close->setGeometry(QRect(600, 0, 41, 41));
         QFont font1;
         font1.setBold(true);
         pushButton_close->setFont(font1);
@@ -105,17 +116,25 @@ public:
 "text-align:centre;\n"
 "border:2px solid black;\n"
 "background-color:rgb(241,92,34);\n"
+"border-radius:0px;\n"
 "}\n"
 "QPushButton:Pressed\n"
 "{\n"
 "margin-left:1px;\n"
 "}\n"
 "QPushButton{\n"
-"background-color:white;\n"
+" qproperty-icon: url(:/icons/close.png);\n"
+"qproperty-iconSize: 50px 50px;  \n"
 "border:0px;\n"
-"font-size:20px;\n"
-"color:black;\n"
+"\n"
 "}"));
+        widget_3 = new QWidget(centralwidget);
+        widget_3->setObjectName("widget_3");
+        widget_3->setGeometry(QRect(0, 0, 640, 720));
+        widget_3->setStyleSheet(QString::fromUtf8("background-image: url(:/icons/login.png);\n"
+"background-repeat:no-repeat;\n"
+"background-position:center;\n"
+"background-color:grey;"));
         Login->setCentralWidget(centralwidget);
         statusbar = new QStatusBar(Login);
         statusbar->setObjectName("statusbar");
@@ -135,7 +154,7 @@ public:
         lineEdit_password->setText(QString());
         lineEdit_password->setPlaceholderText(QCoreApplication::translate("Login", "Password", nullptr));
         pushButton_login->setText(QCoreApplication::translate("Login", "L o g  I n", nullptr));
-        pushButton_close->setText(QCoreApplication::translate("Login", "X", nullptr));
+        pushButton_close->setText(QString());
     } // retranslateUi
 
 };

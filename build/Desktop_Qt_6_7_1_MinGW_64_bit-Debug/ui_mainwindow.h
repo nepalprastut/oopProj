@@ -11,6 +11,7 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
@@ -24,18 +25,17 @@ class Ui_MainWindow
 public:
     QWidget *centralwidget;
     QWidget *widget;
-    QWidget *widget_2;
-    QPushButton *login;
-    QPushButton *signup;
+    QLabel *label;
     QLineEdit *lineEdit;
-    QLineEdit *lineEdit_2;
+    QPushButton *signup;
+    QPushButton *login;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(1000, 1000);
+        MainWindow->resize(1132, 1000);
         MainWindow->setStyleSheet(QString::fromUtf8("/* Navbar Styling */\n"
 "#navbar_2 {\n"
 "    background-color: #2c3e50;  /* Dark background */\n"
@@ -78,72 +78,60 @@ public:
         centralwidget->setSizePolicy(sizePolicy);
         widget = new QWidget(centralwidget);
         widget->setObjectName("widget");
-        widget->setGeometry(QRect(-120, -200, 1000, 1000));
-        widget->setStyleSheet(QString::fromUtf8(""));
-        widget_2 = new QWidget(widget);
-        widget_2->setObjectName("widget_2");
-        widget_2->setGeometry(QRect(120, 210, 1920, 71));
-        widget_2->setStyleSheet(QString::fromUtf8("background-color: purple;"));
-        login = new QPushButton(widget_2);
-        login->setObjectName("login");
-        login->setGeometry(QRect(620, 20, 80, 31));
-        login->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"background-color:blue;\n"
-"font-size:11px;\n"
-"border-radius:15px;\n"
-"}\n"
-"QPushButton:hover\n"
-"{\n"
-"background-color:green;\n"
-"}\n"
-"\n"
-"\n"
-"QPushButton:pressed\n"
-"{\n"
-"margin-left:1px;\n"
-"}"));
-        signup = new QPushButton(widget_2);
-        signup->setObjectName("signup");
-        signup->setGeometry(QRect(720, 20, 80, 31));
-        signup->setStyleSheet(QString::fromUtf8("QPushButton\n"
-"{\n"
-"background-color:blue;\n"
-"font-size:11px;\n"
-"border-radius:15px;\n"
-"}\n"
-"QPushButton:hover\n"
-"{\n"
-"background-color:green;\n"
-"}\n"
-"\n"
-"\n"
-"QPushButton:pressed\n"
-"{\n"
-"margin-left:1px;\n"
-"}"));
-        lineEdit = new QLineEdit(widget_2);
-        lineEdit->setObjectName("lineEdit");
-        lineEdit->setGeometry(QRect(320, 20, 161, 31));
-        QFont font;
-        font.setBold(true);
-        lineEdit->setFont(font);
-        lineEdit->setStyleSheet(QString::fromUtf8("background-color:white;\n"
-"border-radius:15;\n"
-"font-size:13px;\n"
+        widget->setGeometry(QRect(0, 0, 1132, 71));
+        widget->setStyleSheet(QString::fromUtf8("background-color:purple;\n"
 ""));
-        lineEdit_2 = new QLineEdit(widget_2);
-        lineEdit_2->setObjectName("lineEdit_2");
-        lineEdit_2->setGeometry(QRect(0, 0, 161, 71));
-        QFont font1;
-        font1.setBold(false);
-        font1.setItalic(true);
-        lineEdit_2->setFont(font1);
-        lineEdit_2->setStyleSheet(QString::fromUtf8("background-color:purple;\n"
+        label = new QLabel(widget);
+        label->setObjectName("label");
+        label->setGeometry(QRect(0, 0, 211, 71));
+        label->setStyleSheet(QString::fromUtf8("font: italic;\n"
+"font-size:13px;\n"
+"font-weight:bold;"));
+        label->setAlignment(Qt::AlignCenter);
+        lineEdit = new QLineEdit(widget);
+        lineEdit->setObjectName("lineEdit");
+        lineEdit->setGeometry(QRect(350, 20, 181, 31));
+        lineEdit->setStyleSheet(QString::fromUtf8("font-size:11px;\n"
+"font-weight:bold;\n"
+"padding-left:7px;\n"
+"color:grey;\n"
+"background-color:white;\n"
+"border-radius:15px;\n"
+""));
+        signup = new QPushButton(widget);
+        signup->setObjectName("signup");
+        signup->setGeometry(QRect(1040, 20, 80, 31));
+        signup->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"font-weight:bold;\n"
+"border-radius:15px;\n"
+"background-color:blue;\n"
+"}\n"
+"QPushButton:Hover\n"
+"{\n"
+"background-color:green;\n"
+"}\n"
 "\n"
-"font-size:30px;\n"
-"font:italic;\n"
-"border:0px;"));
-        lineEdit_2->setReadOnly(true);
+"QPushButton:Pressed\n"
+"{\n"
+"margin-left:1px;\n"
+"}"));
+        login = new QPushButton(widget);
+        login->setObjectName("login");
+        login->setGeometry(QRect(940, 20, 80, 31));
+        login->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"font-weight:bold;\n"
+"border-radius:15px;\n"
+"background-color:blue;\n"
+"}\n"
+"QPushButton:Hover\n"
+"{\n"
+"background-color:green;\n"
+"}\n"
+"\n"
+"QPushButton:Pressed\n"
+"{\n"
+"margin-left:1px;\n"
+"}"));
         MainWindow->setCentralWidget(centralwidget);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName("statusbar");
@@ -157,11 +145,10 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
-        login->setText(QCoreApplication::translate("MainWindow", "login", nullptr));
-        signup->setText(QCoreApplication::translate("MainWindow", "sign up", nullptr));
-        lineEdit->setPlaceholderText(QCoreApplication::translate("MainWindow", "Search...", nullptr));
-        lineEdit_2->setText(QCoreApplication::translate("MainWindow", "PROJECT", nullptr));
-        lineEdit_2->setPlaceholderText(QCoreApplication::translate("MainWindow", "Search...", nullptr));
+        label->setText(QCoreApplication::translate("MainWindow", "Movie Recommendation System", nullptr));
+        lineEdit->setText(QCoreApplication::translate("MainWindow", "Search", nullptr));
+        signup->setText(QCoreApplication::translate("MainWindow", "Sign Up", nullptr));
+        login->setText(QCoreApplication::translate("MainWindow", "Login", nullptr));
     } // retranslateUi
 
 };

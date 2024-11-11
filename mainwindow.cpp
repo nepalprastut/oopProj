@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include<QDialog>
+#include<QBoxLayout>
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -8,16 +9,17 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
+
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
-    delete login;
-    delete register1;
+//     delete login;
+//     delete register1;
+//
+
 }
-
-
 void MainWindow::on_login_clicked()
 {
     // hide();

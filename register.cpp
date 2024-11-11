@@ -16,11 +16,9 @@ Register::Register(QWidget *parent) :
     setWindowFlag(Qt::FramelessWindowHint);
     setAttribute(Qt::WA_TranslucentBackground,true);
     QList<QLineEdit *> mandatoryFields = {
-      ui->lineEdit_lastname,    // Access by their object name from Qt Designer
-       ui->lineEdit_firstname,
-      ui->lineEdit_conpassword,
+
       ui->lineEdit_crpassword,
-      ui->lineEdit_email,
+     // ui->lineEdit_email,
         ui->lineEdit_crusername
     };
  // Connect the submit button to the validation logic
@@ -53,19 +51,19 @@ Register::Register(QWidget *parent) :
             }
              });
 
-            QButtonGroup *genderGroup = new QButtonGroup(this);
-            genderGroup->addButton(ui->radioButton_male);    // Add 'Male' button
-            genderGroup->addButton(ui->radioButton_female);  // Add 'Female' button
-            genderGroup->addButton(ui->radioButton_other);   // Add 'Other' button
+            // QButtonGroup *genderGroup = new QButtonGroup(this);
+            // genderGroup->addButton(ui->radioButton_male);    // Add 'Male' button
+            // genderGroup->addButton(ui->radioButton_female);  // Add 'Female' button
+            // genderGroup->addButton(ui->radioButton_other);   // Add 'Other' button
 
             // Connect the submit button to the validation logic
-            connect(ui->pushButton_signup, &QPushButton::clicked, this, [this, genderGroup]() {
-                if (genderGroup->checkedButton() == nullptr) {  // No button selected
-                    QMessageBox::warning(this, "Validation Error",
-                                         "Please select a gender.");
-                    return;
-                }
-    });
+    //         connect(ui->pushButton_signup, &QPushButton::clicked, this, [this, genderGroup]() {
+    //             if (genderGroup->checkedButton() == nullptr) {  // No button selected
+    //                 QMessageBox::warning(this, "Validation Error",
+    //                                      "Please select a gender.");
+    //                 return;
+    //             }
+    // });
 
 }
 
@@ -83,18 +81,18 @@ void Register::on_pushButton_close_clicked()
 
 void Register::on_pushButton_signup_clicked()
 {
-    QString FirstName = ui->lineEdit_firstname->text();
-    QString MiddleName = ui->lineEdit_middlename->text();
-    QString LastName = ui->lineEdit_lastname->text();
-    QString Email = ui->lineEdit_email->text();
+    // QString FirstName = ui->lineEdit_firstname->text();
+    // QString MiddleName = ui->lineEdit_middlename->text();
+    // QString LastName = ui->lineEdit_lastname->text();
+    // QString Email = ui->lineEdit_email->text();
     QString UserName = ui->lineEdit_crusername->text();
     QString PassWord = ui->lineEdit_crpassword->text();
-    QString ConfirmPassWord = ui->lineEdit_conpassword->text();
+    // QString ConfirmPassWord = ui->lineEdit_conpassword->text();
 
-    if(PassWord != ConfirmPassWord)
-    {
-         QMessageBox::information(this,"Movie Recommendation System","Incorrect password");
-    }
+    // if(PassWord != ConfirmPassWord)
+    // {
+    //      QMessageBox::information(this,"Movie Recommendation System","Incorrect password");
+    // }
     //aba database connect garerww information input garni ani username match vayo vane try again ko baki
 
 

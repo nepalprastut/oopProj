@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1000</width>
+    <width>1132</width>
     <height>1000</height>
    </rect>
   </property>
@@ -58,146 +58,116 @@ QPushButton#signup {
    <widget class="QWidget" name="widget" native="true">
     <property name="geometry">
      <rect>
-      <x>-120</x>
-      <y>-200</y>
-      <width>1000</width>
-      <height>1000</height>
+      <x>0</x>
+      <y>0</y>
+      <width>1132</width>
+      <height>71</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true"/>
+     <string notr="true">background-color:purple;
+</string>
     </property>
-    <widget class="QWidget" name="widget_2" native="true">
+    <widget class="QLabel" name="label">
      <property name="geometry">
       <rect>
-       <x>120</x>
-       <y>210</y>
-       <width>1920</width>
+       <x>0</x>
+       <y>0</y>
+       <width>211</width>
        <height>71</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: purple;</string>
-     </property>
-     <widget class="QPushButton" name="login">
-      <property name="geometry">
-       <rect>
-        <x>620</x>
-        <y>20</y>
-        <width>80</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton{
-background-color:blue;
-font-size:11px;
-border-radius:15px;
-}
-QPushButton:hover
-{
-background-color:green;
-}
-
-
-QPushButton:pressed
-{
-margin-left:1px;
-}</string>
-      </property>
-      <property name="text">
-       <string>login</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="signup">
-      <property name="geometry">
-       <rect>
-        <x>720</x>
-        <y>20</y>
-        <width>80</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton
-{
-background-color:blue;
-font-size:11px;
-border-radius:15px;
-}
-QPushButton:hover
-{
-background-color:green;
-}
-
-
-QPushButton:pressed
-{
-margin-left:1px;
-}</string>
-      </property>
-      <property name="text">
-       <string>sign up</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="lineEdit">
-      <property name="geometry">
-       <rect>
-        <x>320</x>
-        <y>20</y>
-        <width>161</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>-1</pointsize>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color:white;
-border-radius:15;
+      <string notr="true">font: italic;
 font-size:13px;
+font-weight:bold;</string>
+     </property>
+     <property name="text">
+      <string>Movie Recommendation System</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>20</y>
+       <width>181</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-size:11px;
+font-weight:bold;
+padding-left:7px;
+color:grey;
+background-color:white;
+border-radius:15px;
 </string>
-      </property>
-      <property name="placeholderText">
-       <string>Search...</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="lineEdit_2">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>161</width>
-        <height>71</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>-1</pointsize>
-        <italic>true</italic>
-        <bold>false</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color:purple;
+     </property>
+     <property name="text">
+      <string>Search</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="signup">
+     <property name="geometry">
+      <rect>
+       <x>1040</x>
+       <y>20</y>
+       <width>80</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+font-weight:bold;
+border-radius:15px;
+background-color:blue;
+}
+QPushButton:Hover
+{
+background-color:green;
+}
 
-font-size:30px;
-font:italic;
-border:0px;</string>
-      </property>
-      <property name="text">
-       <string>PROJECT</string>
-      </property>
-      <property name="readOnly">
-       <bool>true</bool>
-      </property>
-      <property name="placeholderText">
-       <string>Search...</string>
-      </property>
-     </widget>
+QPushButton:Pressed
+{
+margin-left:1px;
+}</string>
+     </property>
+     <property name="text">
+      <string>Sign Up</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="login">
+     <property name="geometry">
+      <rect>
+       <x>940</x>
+       <y>20</y>
+       <width>80</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+font-weight:bold;
+border-radius:15px;
+background-color:blue;
+}
+QPushButton:Hover
+{
+background-color:green;
+}
+
+QPushButton:Pressed
+{
+margin-left:1px;
+}</string>
+     </property>
+     <property name="text">
+      <string>Login</string>
+     </property>
     </widget>
    </widget>
   </widget>
