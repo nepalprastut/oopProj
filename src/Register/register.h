@@ -1,24 +1,33 @@
-// #ifndef REGISTER_H
-// #define REGISTER_H
+#ifndef REGISTER_H
+#define REGISTER_H
 
-// #include <QMainWindow>
-// #include "ui_register.h"
-// QT_BEGIN_NAMESPACE
-// namespace Ui {
-// class Register;
-// }
-// QT_END_NAMESPACE
+#include <QMainWindow>
+#include "ui_register.h"
+#include "src/Database/database.h"
+#include "QMessageBox"
 
 
-// class Register : public QMainWindow {
-//     Q_OBJECT
+namespace Ui {
+class Register;
+}
 
-// public:
-//     Register(QWidget *parent = nullptr);
-//     ~Register();
+class Register : public QMainWindow
+{
+    Q_OBJECT
 
-// private:
-//     Ui::Register *ui;
-// };
+public:
+    explicit Register(Database *db, QWidget *parent = nullptr);
+    ~Register();
 
-// #endif
+
+private slots:
+
+
+    void on_signupBtn_clicked();
+
+private:
+    Ui::Register *ui;
+    Database *db;
+};
+
+#endif // REGISTER_H

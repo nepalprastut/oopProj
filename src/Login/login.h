@@ -3,22 +3,29 @@
 
 #include <QMainWindow>
 #include "ui_login.h"
-QT_BEGIN_NAMESPACE
+#include "src/Database/database.h"
+#include "QMessageBox"
+
+
 namespace Ui {
 class Login;
 }
-QT_END_NAMESPACE
 
-
-class Login : public QMainWindow {
+class Login : public QMainWindow
+{
     Q_OBJECT
 
 public:
-    Login(QWidget *parent = nullptr);
+    explicit Login(Database *db, QWidget *parent = nullptr);
     ~Login();
+
+private slots:
+    void on_loginBtn_clicked();
 
 private:
     Ui::Login *ui;
+    Database *db;
 };
 
-#endif
+#endif // LOGIN_H
+
