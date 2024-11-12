@@ -2,14 +2,25 @@
 #include "ui_mainwindow.h"
 #include<QDialog>
 #include<QBoxLayout>
+#include<QApplication>
+#include<QScreen>
 
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent),ui(new Ui::MainWindow),login(new Login(this)),register1(new Register(this))
 {
     ui->setupUi(this);
+    setWindowFlag(Qt::FramelessWindowHint);
+    connect(ui->pushButton_close, &QPushButton::clicked, this, &MainWindow::close);
+
+    setAttribute(Qt::WA_TranslucentBackground,true);
+    QScreen *screen = QGuiApplication::primaryScreen();
+    QRect screenGeometry = screen->geometry();
+    int screenWidth = screenGeometry.width();
+    int screenHeight = screenGeometry.height();
 
 
+     QApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
 }
 
 MainWindow::~MainWindow()
@@ -44,4 +55,10 @@ void MainWindow::on_signup_clicked()
 }
 
 
+
+
+// void MainWindow::on_pushButton_close_clicked()
+// {
+//     close();
+// }
 

@@ -5,6 +5,8 @@
         <file>close.png</file>
         <file>login.png</file>
         <file>signup.png</file>
+        <file>film.png</file>
+        <file>bg.jpg</file>
     </qresource>
     <qresource prefix="/"/>
 </RCC>

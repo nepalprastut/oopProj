@@ -67,7 +67,7 @@ border:0px;
        <x>40</x>
        <y>340</y>
        <width>231</width>
-       <height>31</height>
+       <height>41</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -142,7 +142,7 @@ color:black;
 border:none;
 border-bottom:2px solid rgba(105,118,132,255);
 color:rgba(255,255,255,230);
-font-size:13px;
+font-size:20px;
 color:black;</string>
      </property>
      <property name="text">
@@ -178,7 +178,7 @@ color:black;</string>
 border:none;
 border-bottom:2px solid rgba(105,118,132,255);
 color:rgba(255,255,255,230);
-font-size:13px;
+font-size:20px;
 color:black;</string>
      </property>
      <property name="text">
@@ -263,7 +263,7 @@ font-size:15px;</string>
 border:none;
 border-bottom:2px solid rgba(105,118,132,255);
 color:rgba(255,255,255,230);
-font-size:13px;
+font-size:20px;
 color:black;</string>
      </property>
      <property name="text">
