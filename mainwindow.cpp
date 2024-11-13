@@ -14,13 +14,19 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->pushButton_close, &QPushButton::clicked, this, &MainWindow::close);
 
     setAttribute(Qt::WA_TranslucentBackground,true);
-    QScreen *screen = QGuiApplication::primaryScreen();
-    QRect screenGeometry = screen->geometry();
-    int screenWidth = screenGeometry.width();
-    int screenHeight = screenGeometry.height();
+    // QScreen *screen = QGuiApplication::primaryScreen();
+    // QRect screenGeometry = screen->geometry();
+    // int screenWidth = screenGeometry.width();
+    // int screenHeight = screenGeometry.height();
+   // resize(screenWidth * 1, screenHeight * 1);
 
+    // QScreen *screen = QGuiApplication::primaryScreen();
+    // QRect screenGeometry = screen->geometry();
 
-     QApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
+    // // Resize window to 80% of the screen size directly
+    // resize(screenGeometry.width() * 1, screenGeometry.height() * 1);
+
+    //  QApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
 }
 
 MainWindow::~MainWindow()
