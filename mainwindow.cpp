@@ -10,8 +10,8 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent),ui(new Ui::MainWindow),login(new Login(this)),register1(new Register(this))
 {
     ui->setupUi(this);
-    setWindowFlag(Qt::FramelessWindowHint);
-    connect(ui->pushButton_close, &QPushButton::clicked, this, &MainWindow::close);
+   // setWindowFlag(Qt::FramelessWindowHint);
+    //connect(ui->pushButton_close, &QPushButton::clicked, this, &MainWindow::close);
 
     setAttribute(Qt::WA_TranslucentBackground,true);
     // QScreen *screen = QGuiApplication::primaryScreen();

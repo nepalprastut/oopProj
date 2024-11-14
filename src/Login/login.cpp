@@ -87,8 +87,8 @@ Login::~Login() {
 // }
 
 
-void Login::on_pushButton_close_clicked()
-{
-    close();
-}
+// void Login::on_pushButton_close_clicked()
+// {
+//     close();
+// }
 

@@ -13,7 +13,7 @@ Register::Register(QWidget *parent) :
     ui(new Ui::Register)
 {
     ui->setupUi(this);
-    setWindowFlag(Qt::FramelessWindowHint);
+   // setWindowFlag(Qt::FramelessWindowHint);
     setAttribute(Qt::WA_TranslucentBackground,true);
     QList<QLineEdit *> mandatoryFields = {
 
@@ -75,10 +75,10 @@ Register::~Register()
     delete ui;
 }
 
-void Register::on_pushButton_close_clicked()
-{
-    close();
-}
+// void Register::on_pushButton_close_clicked()
+// {
+//     close();
+// }
 
 
 void Register::on_pushButton_signup_clicked()

@@ -59,7 +59,7 @@ QPushButton#signup {
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>40</y>
+      <y>0</y>
       <width>1281</width>
       <height>71</height>
      </rect>
@@ -68,43 +68,6 @@ QPushButton#signup {
      <string notr="true">background-color:purple;
 </string>
     </property>
-    <widget class="QLineEdit" name="lineEdit">
-     <property name="enabled">
-      <bool>true</bool>
-     </property>
-     <property name="geometry">
-      <rect>
-       <x>440</x>
-       <y>20</y>
-       <width>331</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="mouseTracking">
-      <bool>true</bool>
-     </property>
-     <property name="focusPolicy">
-      <enum>Qt::FocusPolicy::ClickFocus</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">font-size:11px;
-font-weight:bold;
-padding-left:7px;
-color:grey;
-background-color:white;
-border-radius:15px;
-</string>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="placeholderText">
-      <string>Search...</string>
-     </property>
-     <property name="clearButtonEnabled">
-      <bool>true</bool>
-     </property>
-    </widget>
     <widget class="QPushButton" name="signup">
      <property name="geometry">
       <rect>
@@ -177,85 +140,13 @@ margin-left:1px;
      </property>
     </widget>
    </widget>
-   <widget class="QWidget" name="widget_3" native="true">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>1281</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color:white;</string>
-    </property>
-    <widget class="QLabel" name="label">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>0</y>
-       <width>331</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">font: italic;
-font-size:20px;
-font-weight:bold;
-color:black;</string>
-     </property>
-     <property name="text">
-      <string>Movie Recommendation System</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignmentFlag::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_close">
-     <property name="geometry">
-      <rect>
-       <x>1240</x>
-       <y>0</y>
-       <width>41</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton:Hover
-{
-text-align:centre;
-border:2px solid black;
-background-color:rgb(241,92,34);
-border-radius:0px;
-}
-QPushButton:Pressed
-{
-margin-left:1px;
-}
-QPushButton{
- qproperty-icon: url(:/icons/close.png);
-qproperty-iconSize: 50px 50px;  
-border:0px;
-
-}</string>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
-   </widget>
    <widget class="QWidget" name="widget_4" native="true">
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>110</y>
+      <y>70</y>
       <width>1281</width>
-      <height>641</height>
+      <height>681</height>
      </rect>
     </property>
     <property name="sizePolicy">
