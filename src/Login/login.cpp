@@ -4,7 +4,7 @@
 Login::Login(QWidget *parent)
     : QMainWindow(parent), ui(new Ui::Login) {
     ui->setupUi(this);
-    setWindowFlag(Qt::FramelessWindowHint);
+   // setWindowFlag(Qt::FramelessWindowHint);
     setAttribute(Qt::WA_TranslucentBackground,true);
     QList<QLineEdit *> mandatoryFields = {
         ui->lineEdit_password,    // Access by their object name from Qt Designer
