@@ -54,8 +54,8 @@ void MainWindow::on_signup_clicked()
    // hide();
     // register1 = new Register(this);
     // register1->show();
-    register1->setModal(true);
-     register1->exec();
+    register1->setWindowModality(Qt::ApplicationModal);
+   register1->show();
 
 
 }

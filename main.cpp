@@ -1,7 +1,7 @@
 #include <QApplication>
 #include "mainwindow.h"
 #include <src/Login/login.h>
-#include <register.h>
+#include <src/Register/register.h>
 
 int main(int argc, char *argv[])
 {

@@ -11,16 +11,25 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QDialog>
+#include<QtWidgets/QMainWindow>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QWidget>
+#include <QtWidgets/QGridLayout>
+#include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QStatusBar>
+#include <QtWidgets/QVBoxLayout>
 
 QT_BEGIN_NAMESPACE
 
 class Ui_Register
 {
 public:
+    QWidget *centralwidget;
+    QHBoxLayout *horizontalLayout;
+    QGridLayout *gridLayout;
+    QVBoxLayout *verticalLayout;
+    QStatusBar *statusbar;
     QWidget *widget;
     QPushButton *pushButton_signup;
     QLineEdit *lineEdit;
@@ -30,11 +39,11 @@ public:
     QLineEdit *lineEdit_2;
     QLineEdit *lineEdit_3;
 
-    void setupUi(QDialog *Register)
+    void setupUi(QMainWindow *Register)
     {
         if (Register->objectName().isEmpty())
             Register->setObjectName("Register");
-        Register->resize(1082, 769);
+        Register->resize(1280, 769);
         Register->setMinimumSize(QSize(0, 0));
         widget = new QWidget(Register);
         widget->setObjectName("widget");
@@ -137,9 +146,9 @@ public:
         QMetaObject::connectSlotsByName(Register);
     } // setupUi
 
-    void retranslateUi(QDialog *Register)
+    void retranslateUi(QMainWindow *Register)
     {
-        Register->setWindowTitle(QCoreApplication::translate("Register", "Dialog", nullptr));
+        Register->setWindowTitle(QCoreApplication::translate("Register", "MainWindow", nullptr));
         pushButton_signup->setText(QCoreApplication::translate("Register", "S i g n  U p", nullptr));
         lineEdit->setText(QCoreApplication::translate("Register", "S I G N   I N", nullptr));
         lineEdit_crpassword->setText(QString());

@@ -1,7 +1,7 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 #include "src/Login/login.h"
-#include "register.h"
+#include "src/Register/register.h"
 #include <QMainWindow>
 #include <QDialog>
 

@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Movie Recommendation System</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="styleSheet">
@@ -49,7 +49,7 @@ background-color:grey;</string>
        <string notr="true">background-color: rgb(243, 244, 248);</string>
       </property>
       <layout class="QGridLayout" name="gridLayout">
-       <item row="0" column="0" alignment="|Qt::AlignmentFlag::AlignVCenter">
+       <item row="0" column="0" alignment="Qt::AlignmentFlag::AlignHCenter|Qt::AlignmentFlag::AlignVCenter">
         <widget class="QWidget" name="widget" native="true">
          <property name="styleSheet">
           <string notr="true">background-color:white;
@@ -58,6 +58,13 @@ border: 2px solid rgba(255, 255, 255, .2);
 box_shadow: 0 0 10px rgba(0, 0, 0, .2);</string>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <widget class="QLineEdit" name="lineEdit_2">
+            <property name="readOnly">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
           <item>
            <widget class="QLineEdit" name="lineEdit">
             <property name="styleSheet">
@@ -138,6 +145,13 @@ color:black;</string>
            </widget>
           </item>
           <item>
+           <widget class="QLineEdit" name="lineEdit_4">
+            <property name="readOnly">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
            <widget class="QPushButton" name="pushButton_login">
             <property name="styleSheet">
              <string notr="true">QPushButton
@@ -159,6 +173,13 @@ margin-left:1%px;
             </property>
             <property name="text">
              <string>L o g  I n</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_3">
+            <property name="readOnly">
+             <bool>true</bool>
             </property>
            </widget>
           </item>
